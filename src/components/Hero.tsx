@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import leafPattern from '../assets/leaf-pattern.svg';
 export function Hero() {
   return (
     <section
@@ -10,7 +10,7 @@ export function Hero() {
       <div
         className="absolute inset-0 opacity-90 pointer-events-none"
         style={{
-          backgroundImage: 'url("/assets/leaf-pattern.svg")',
+          backgroundImage: `url("${leafPattern}")`,
           backgroundRepeat: 'repeat',
           backgroundSize: '450px 450px',
         }} />

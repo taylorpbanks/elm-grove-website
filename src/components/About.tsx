@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import ownerPhoto from '../assets/owner-photo.png';
 export function About() {
   return (
     <section id="about" className="py-24 bg-cream">
@@ -86,7 +86,7 @@ export function About() {
             <div className="relative h-[500px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl overflow-hidden shadow-xl shadow-deepTeal/10">
               {/* Placeholder for Team Photo */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-deepTeal/30 bg-cream/50">
-                <img src="/assets/owner-photo.png" alt="Jordan Banks" className="mb-4" />
+                <img src={ownerPhoto} alt="Jordan Banks" className="mb-4" />
                 <span className="font-serif text-xl italic">
                   Jordan Banks, Owner
                 </span>

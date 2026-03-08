@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  Hammer,
   Facebook,
   Instagram,
   Linkedin,
   Mail,
   Phone,
-  MapPin } from
-'lucide-react';
+  MapPin,
+} from 'lucide-react';
+import logoNameLight from '../assets/logo-name-light.svg';
 export function Footer() {
   return (
     <footer className="bg-deepTeal text-cream pt-16 pb-8">
@@ -16,7 +16,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <img src="/assets/logo-name-light.svg" alt="Elm Grove Renovations" className="h-10" />
+              <img src={logoNameLight} alt="Elm Grove Renovations" className="h-10" />
             </div>
             <p className="text-cream/60 text-sm leading-relaxed mb-6">
               Crafting beautiful, lasting living spaces in Omaha since 2020. We believe

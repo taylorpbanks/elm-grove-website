@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoName from '../assets/logo-name.svg';
 import { motion, AnimatePresence } from 'framer-motion';
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,7 +50,7 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           <a href="#hero" className="flex items-center space-x-2 group">
             <div>
-              <img src="/assets/logo-name.svg" alt="Elm Grove Renovations" className="h-12" />
+              <img src={logoName} alt="Elm Grove Renovations" className="h-12" />
             </div>
           </a>
 

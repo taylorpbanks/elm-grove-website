@@ -1,7 +1,76 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
 import { ProjectModal } from './ProjectModal';
+
+import k1_1 from '../assets/kitchen-1/1.png';
+import k1_2 from '../assets/kitchen-1/2.png';
+import k1_3 from '../assets/kitchen-1/3.png';
+import k1_4 from '../assets/kitchen-1/4.png';
+import k1_5 from '../assets/kitchen-1/5.png';
+import k1_6 from '../assets/kitchen-1/6.png';
+import k1_7 from '../assets/kitchen-1/7.png';
+import k1_8 from '../assets/kitchen-1/8.png';
+import k2_1 from '../assets/kitchen-2/1.png';
+import k2_2 from '../assets/kitchen-2/2.png';
+import k2_3 from '../assets/kitchen-2/3.png';
+import k2_4 from '../assets/kitchen-2/4.png';
+import k2_5 from '../assets/kitchen-2/5.png';
+import k3_1 from '../assets/kitchen-3/1.png';
+import k3_2 from '../assets/kitchen-3/2.png';
+import k3_3 from '../assets/kitchen-3/3.png';
+import k3_4 from '../assets/kitchen-3/4.png';
+import k3_5 from '../assets/kitchen-3/5.png';
+import k3_6 from '../assets/kitchen-3/6.png';
+import k3_7 from '../assets/kitchen-3/7.png';
+import k3_8 from '../assets/kitchen-3/8.png';
+import k4_1 from '../assets/kitchen-4/1.png';
+import k4_2 from '../assets/kitchen-4/2.png';
+import k4_3 from '../assets/kitchen-4/3.png';
+import k4_4 from '../assets/kitchen-4/4.png';
+import k4_5 from '../assets/kitchen-4/5.png';
+import k4_6 from '../assets/kitchen-4/6.png';
+import k4_7 from '../assets/kitchen-4/7.png';
+import k5_1 from '../assets/kitchen-5/1.png';
+import k5_2 from '../assets/kitchen-5/2.png';
+import k5_3 from '../assets/kitchen-5/3.png';
+import k5_4 from '../assets/kitchen-5/4.png';
+import b1_1 from '../assets/bathroom-1/1.jpg';
+import b1_2 from '../assets/bathroom-1/2.jpg';
+import b1_3 from '../assets/bathroom-1/3.jpg';
+import b1_4 from '../assets/bathroom-1/4.jpg';
+import b2_1 from '../assets/bathroom-2/1.png';
+import b2_2 from '../assets/bathroom-2/2.png';
+import b2_3 from '../assets/bathroom-2/3.png';
+import b2_4 from '../assets/bathroom-2/4.png';
+import b3_1 from '../assets/bathroom-3/1.png';
+import b3_2 from '../assets/bathroom-3/2.png';
+import b3_3 from '../assets/bathroom-3/3.png';
+import b3_4 from '../assets/bathroom-3/4.png';
+import b3_5 from '../assets/bathroom-3/5.png';
+import b4_1 from '../assets/bathroom-4/1.png';
+import b4_2 from '../assets/bathroom-4/2.png';
+import b4_3 from '../assets/bathroom-4/3.png';
+import b5_1 from '../assets/bathroom-5/1.png';
+import b5_2 from '../assets/bathroom-5/2.png';
+import b5_3 from '../assets/bathroom-5/3.png';
+import o1_1 from '../assets/outdoor-1/1.png';
+import o1_2 from '../assets/outdoor-1/2.png';
+import o1_3 from '../assets/outdoor-1/3.png';
+import o1_4 from '../assets/outdoor-1/4.png';
+import o2_1 from '../assets/outdoor-2/1.png';
+import o2_2 from '../assets/outdoor-2/2.png';
+import o2_3 from '../assets/outdoor-2/3.png';
+import o3_1 from '../assets/outdoor-3/1.png';
+import o3_2 from '../assets/outdoor-3/2.png';
+import bs1_1 from '../assets/basement-1/1.png';
+import bs1_2 from '../assets/basement-1/2.png';
+import bs1_3 from '../assets/basement-1/3.png';
+import bs1_4 from '../assets/basement-1/4.png';
+import bs2_1 from '../assets/basement-2/1.png';
+import bs2_2 from '../assets/basement-2/2.png';
+import bs2_3 from '../assets/basement-2/3.png';
+import bs2_4 from '../assets/basement-2/4.png';
 const categories = [
 'All',
 'Kitchen',
@@ -41,16 +110,7 @@ const projects: Project[] = [
       year: '2023',
       location: 'Omaha, NE',
     },*/
-    images: [
-      '/assets/kitchen-1/4.png',
-      '/assets/kitchen-1/7.png',
-      '/assets/kitchen-1/1.png',
-      '/assets/kitchen-1/2.png',
-      '/assets/kitchen-1/3.png',
-      '/assets/kitchen-1/5.png',
-      '/assets/kitchen-1/6.png',
-      '/assets/kitchen-1/8.png',
-    ],
+    images: [k1_4, k1_7, k1_1, k1_2, k1_3, k1_5, k1_6, k1_8],
   },
   {
     title: 'Golf Course Chef\'s Kitchen',
@@ -63,67 +123,35 @@ const projects: Project[] = [
       year: '2023',
       location: 'Omaha, NE',
     },*/
-    images: [
-      '/assets/kitchen-3/8.png',
-      '/assets/kitchen-3/1.png',
-      '/assets/kitchen-3/2.png',
-      '/assets/kitchen-3/3.png',
-      '/assets/kitchen-3/4.png',
-      '/assets/kitchen-3/5.png',
-      '/assets/kitchen-3/6.png',
-      '/assets/kitchen-3/7.png',
-    ],
+    images: [k3_8, k3_1, k3_2, k3_3, k3_4, k3_5, k3_6, k3_7],
   },
   {
     title: 'Dundee Bathroom Spa Retreat',
     type: 'Bathroom',
     description:
     'Converting a jack-and-jill bathroom into a spa-like retreat with a soaking tub, walk-in shower, and custom tilework.',
-    images: [
-      '/assets/bathroom-3/1.png',
-      '/assets/bathroom-3/2.png',
-      '/assets/bathroom-3/3.png',
-      '/assets/bathroom-3/4.png',
-      '/assets/bathroom-3/5.png',
-    ]
+    images: [b3_1, b3_2, b3_3, b3_4, b3_5]
   },
   {
     title: 'Tiered Backyard Deck',
     type: 'Outdoor Living',
     description:
     'Modern outdoor deck with composite decking, aluminum railings, and a privacy screen designed for relaxing and entertaining.',
-    images: [
-      '/assets/outdoor-1/1.png',
-      '/assets/outdoor-1/2.png',
-      '/assets/outdoor-1/3.png',
-      '/assets/outdoor-1/4.png',
-    ]
+    images: [o1_1, o1_2, o1_3, o1_4]
   },
   {
     title: 'White Oak Primary Bathroom',
     type: 'Bathroom',
     description:
     'Primary bathroom remodel with heated floors, custom white oak vanities, an oversized walk-in shower, and frameless glass enclosure.',
-    images: [
-      '/assets/bathroom-4/1.png',
-      '/assets/bathroom-4/2.png',
-      '/assets/bathroom-4/3.png',
-    ],
+    images: [b4_1, b4_2, b4_3],
   },
   {
     title: 'Gretna Gathering Kitchen',
     type: 'Kitchen',
     description:
     'Open, welcoming kitchen in Gretna with a spacious 10-foot island, built-in pantry, and bright, airy finishes designed for family living.',
-    images: [
-      '/assets/kitchen-4/4.png',
-      '/assets/kitchen-4/1.png',
-      '/assets/kitchen-4/2.png',
-      '/assets/kitchen-4/3.png',
-      '/assets/kitchen-4/5.png',
-      '/assets/kitchen-4/6.png',
-      '/assets/kitchen-4/7.png',
-    ],
+    images: [k4_4, k4_1, k4_2, k4_3, k4_5, k4_6, k4_7],
   },
   {
     title: 'Loveland Walnut Custom Bath',
@@ -136,22 +164,14 @@ const projects: Project[] = [
       year: '2023',
       location: 'Omaha, NE',
     },*/
-    images: [
-      '/assets/bathroom-2/1.png',
-      '/assets/bathroom-2/2.png',
-      '/assets/bathroom-2/3.png',
-      '/assets/bathroom-2/4.png',
-    ],
+    images: [b2_1, b2_2, b2_3, b2_4],
   },
   {
     title: 'Pondside Retreat Deck',
     type: 'Outdoor Living',
     description:
     'Ground-level composite deck built beside the pond, creating a quiet and tranquil space to relax and enjoy the water.',
-    images: [
-      '/assets/outdoor-3/1.png',
-      '/assets/outdoor-3/2.png',
-    ]
+    images: [o3_1, o3_2]
   },
   {
     title: 'Classic Black & White Bath',
@@ -164,23 +184,14 @@ const projects: Project[] = [
       year: '2023',
       location: 'Omaha, NE',
     },*/
-    images: [
-      '/assets/bathroom-1/1.JPG',
-      '/assets/bathroom-1/2.jpg',
-      '/assets/bathroom-1/3.jpg',
-      '/assets/bathroom-1/4.JPG',
-    ],
+    images: [b1_1, b1_2, b1_3, b1_4],
   },
   {
     title: 'Garden Entry Pergola',
     type: 'Outdoor Living',
     description:
     'Wood entrance pergola surrounded by garden beds, featuring accent lighting that softly illuminates the walkway.',
-    images: [
-      '/assets/outdoor-2/1.png',
-      '/assets/outdoor-2/2.png',
-      '/assets/outdoor-2/3.png',
-    ]
+    images: [o2_1, o2_2, o2_3]
   },
   {
     title: 'Benson Botanical Kitchen',
@@ -195,60 +206,35 @@ const projects: Project[] = [
       year: '2023',
       location: 'Omaha, NE',
     },*/
-    images: [
-      '/assets/kitchen-2/1.png',
-      '/assets/kitchen-2/2.png',
-      '/assets/kitchen-2/3.png',
-      '/assets/kitchen-2/4.png',
-      '/assets/kitchen-2/5.png',
-    ],
+    images: [k2_1, k2_2, k2_3, k2_4, k2_5],
   },
   {
     title: 'Soaking Tub & Walk-In Shower',
     type: 'Bathroom',
     description:
     'Warm, functional family bathroom with a freestanding soaking tub and custom frameless glass shower for the walkin shower experience.',
-    images: [
-      '/assets/bathroom-5/1.png',
-      '/assets/bathroom-5/2.png',
-      '/assets/bathroom-5/3.png',
-    ]
+    images: [b5_1, b5_2, b5_3]
   },
   {
     title: 'Westside Basement Finishing',
     type: 'Finished Basement',
     description:
     'Complete basement finish including a newly added bathroom, custom built-ins, and a welcoming entertainment zone.',
-    images: [
-      '/assets/basement-1/1.png',
-      '/assets/basement-1/2.png',
-      '/assets/basement-1/3.png',
-      '/assets/basement-1/4.png',
-    ]
+    images: [bs1_1, bs1_2, bs1_3, bs1_4]
   },
   {
     title: 'Aksarben Bump-Out Kitchen',
     type: 'Kitchen',
     description:
     'Aksarben kitchen remodel with bold custom cabinetry and a 3-foot bump-out that opened up the space and improved functionality.',
-    images: [
-      '/assets/kitchen-5/1.png',
-      '/assets/kitchen-5/2.png',
-      '/assets/kitchen-5/3.png',
-      '/assets/kitchen-5/4.png',
-    ],
+    images: [k5_1, k5_2, k5_3, k5_4],
   },
   {
     title: 'Basement Living Addition',
     type: 'Finished Basement',
     description:
     'Transformed an unfinished basement into a functional living space with a new office, bedroom, and full bathroom.',
-    images: [
-      '/assets/basement-2/1.png',
-      '/assets/basement-2/2.png',
-      '/assets/basement-2/3.png',
-      '/assets/basement-2/4.png',
-    ]
+    images: [bs2_1, bs2_2, bs2_3, bs2_4]
   },
  ];
 
