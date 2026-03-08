@@ -60,7 +60,7 @@ export function Services() {
             Expertise in Every Detail
           </h2>
           <p className="text-lg text-deepTeal/70">
-            We bring over two decades of experience to every project, ensuring
+            We bring over a decade of experience to every project, ensuring
             that the finished result isn't just beautiful, but built to stand
             the test of time.
           </p>
